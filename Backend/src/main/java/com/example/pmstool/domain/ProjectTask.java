@@ -20,7 +20,7 @@ public class ProjectTask {
     private String status;
     private Integer priority;
     private Date dueDate;
-    //ManyToOne with Backlog
+   
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     @JoinColumn(name="backlog_id", updatable = false, nullable = false)
     @JsonIgnore
